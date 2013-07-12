@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
     var databuf = new Buffer(50);
-    fs.readFileSync('index.html', function(err,databuf){
+    fs.readFileSync('index.html', 'utf8', function(err,databuf){
       if(err)throw err;
       console.log(databuf);
   });
