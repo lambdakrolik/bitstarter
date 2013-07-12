@@ -10,7 +10,7 @@ fs.readFileSync('index.html', 'utf8', function(err,datastring){
       if(err)throw err;
       console.log(datastring);
   });
-response.send(datastring);
+response.send('ueay'/*datastring*/);
 //response.send(databuf.toString('utf-8'));
 });
 
