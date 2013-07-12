@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
       if(err)throw err;
       console.log(databuf);
   });
-response.send(databuf.toString('utf-8'));
+response.send("test"/*databuf.toString('utf-8')*/);
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
