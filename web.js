@@ -6,12 +6,12 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
     var databuf = new Buffer(50);
 var datastring;    
-fs.readFileSync('index.html', 'utf8', function(err,datastring){
+fs.readFileSync('/home/ubuntu/bitstarter/index.html', 'utf8', function(err,databuf){
       if(err)throw err;
-      console.log(datastring);
+      console.log(databuf);
   });
-response.send('ueay'/*datastring*/);
-//response.send(databuf.toString('utf-8'));
+
+response.send(databuf.toString('utf-8'));
 });
 
 var port = process.env.PORT || 5000;
